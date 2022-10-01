@@ -1,0 +1,8 @@
+﻿@model Order
+<h1>Are you sure to delete this <b>ORDER</b></h1>
+
+
+        <p>Address : @Model.Address</p>
+        <p>Email : @Model.Email</p>
+        <p>Description : @Model.Description</p>
+<a href="/admin/orders/deleteconfirmed/@Model.Id" class="btn btn-danger">Delete</a>

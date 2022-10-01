@@ -1,0 +1,34 @@
+﻿@model List<Message>
+
+<h1  class="mb-4">Messages</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Settings</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Message item in Model)
+        {
+            <tr>
+                <td>@item.SenderName</td>
+                <td>@item.SenderEmail</td>
+                <td>@item.SenderPhone</td>
+                <td>@item.Subject</td>
+                <td>@item.MessageText</td>
+                <td>@item.Date</td>
+                <td>
+                    <a href="/admin/messages/delete/@item.Id" class="btn btn-danger">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

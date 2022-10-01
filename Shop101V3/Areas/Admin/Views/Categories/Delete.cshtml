@@ -1,0 +1,9 @@
+﻿@model Category
+<h2 class="text-danger">Do you really want to delete this message?</h2>
+<p>Name: @Model.Name</p>
+<hr />
+<p>
+    Image: <img src="~/images/featured-categories/@Model.ProductImage " style="width:50px " />
+</p>
+<hr />
+<a href="/admin/categories/deleteconfirmed/@Model.Id" class="btn btn-danger">Delete</a>

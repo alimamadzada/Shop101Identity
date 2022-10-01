@@ -1,0 +1,15 @@
+﻿@model Message
+<h2 class="text-danger">Do you really want to delete this message?</h2>
+<p>Name: @Model.SenderName</p>
+<hr />
+<p>Email: @Model.SenderEmail</p>
+<hr />
+<p>Phone: @Model.SenderPhone</p>
+<hr />
+<p>Subject: @Model.Subject</p>
+<hr />
+<p>Message: @Model.MessageText</p>
+<hr />
+<p>Date: @Model.Date</p>
+
+<a href="/admin/messages/deleteconfirmed/@Model.Id" class="btn btn-danger">Delete</a>
